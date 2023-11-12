@@ -1,0 +1,14 @@
+
+
+@media(orientation:landscape) {
+    div{
+        background-color: red;
+    }
+}
+
+@media(orientation:portrait){
+    div{
+        font-size: 30px;
+        background-color: green;
+    }
+}
