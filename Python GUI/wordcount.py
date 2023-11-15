@@ -15,16 +15,18 @@ f.resizable(width=0,height=0)
 # function to count words
 def countword():
      txt = ta.get("1.0", 'end-1c')
-     tword=len(txt.strip().split(' '))
+     tword=len(txt.strip().split())
      res.config(text="Total Words : "+str(tword))
 
 # function to count sentences
 def countsentence():
-     res.config(text="Total Sentences : "+str(ta.get("1.0", 'end-1c').count('.')))
+     txt = ta.get("1.0", 'end-1c')
+     res.config(text="Total Sentences : "+str(txt.count('.')+txt.count('?')))
 
 # function to count characters
 def countcharacter():
-     res.config(text="Total Characters : "+str(len(ta.get("1.0", 'end-1c'))))
+     txt = ta.get("1.0", 'end-1c')
+     res.config(text="Total Characters : "+str(len(txt.replace('\n',''))))
 
 # text area to input text by end-users
 ta = t.Text(f,width=96,height=15)
