@@ -1,0 +1,1 @@
+print("ye sahi hai bhai") if 10>9 else print("ye galat ka parinam hai bhai")
