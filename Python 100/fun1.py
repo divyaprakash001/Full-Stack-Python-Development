@@ -4,6 +4,6 @@ def calculategmean():
     gmean = (a*b)/(a+b)
     print(gmean)
 
-calculategmean()
-calculategmean()
-calculategmean()
+boy = 'you are a boy'
+
+# calculategmean()
