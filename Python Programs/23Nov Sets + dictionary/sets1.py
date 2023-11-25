@@ -1,7 +1,7 @@
 a = {'apple','orange','mango','apple',23,'banana','sfsg'}
 # print(a,type(a))
 # accessing element of sets
-# print(a[0])  #cannot do indexing as not it is unordered
+# print(a[0])  #cannot do indexing as not it is unordered or not subscriptable
 # print(a[1:4])  #cannot do slicing
 
 # value change
