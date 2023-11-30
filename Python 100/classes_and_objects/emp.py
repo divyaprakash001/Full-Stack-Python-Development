@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Employee:
     def __init__(self,name):
         self.name=name
@@ -12,6 +15,8 @@ class Employee:
         return f'The name of the employee is {self.name} str'
     
     def  __repr__(self):
-        return f'The name of the employee is {self.name} repr'
+        return f"Employee('{self.name}')"
     
+    def __call__(self):
+        print(f"Hey I am good.")    
     
