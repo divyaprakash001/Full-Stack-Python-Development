@@ -5,12 +5,6 @@ f.title('Employee Details')
 f.geometry('400x500')
 f.resizable(width=0,height=0)
 
-f1=t.Tk()
-f1.title('Employee Details')
-f1.geometry('400x500')
-f1.resizable(width=0,height=0)
-
-
 
 v1 = t.StringVar(f,value='Male')
 v2=t.IntVar()
@@ -28,13 +22,14 @@ def getdata():
         msg = msg+' Developer'
     msg = msg +'\nGender :: ' + v1.get()
     msg = msg + '\nState :: '+ cmb.get()
-    msg = msg + '\nAddress :: ' + adr.get("1.0", 'end-1c')
-    lb1.config(text='Details '+ msg)
+    msg = msg + '\nAddress :: ' + adr.get("1.0", 'end-1c') + '\n\n'
     print(msg)
+    with open('E:\Python Full Stack Development\Python GUI\employeeDetails.txt','a') as f:
+        f.writelines(msg)
+        
 
-# for second window
-lb1=t.Label(f1,text='Employee Details',bg='blue',fg='white',font=('verdana 11 bold'))
-lb1.place(x=10,y=10)
+
+
 
 t.Label(f,text='Employee Details',bg='blue',fg='white',font=('verdana 14 bold')).place(x=90,y=10)
 t.Label(f,text='Employee Name',font=('arial 10 bold')).place(x=20,y=50)
@@ -75,4 +70,3 @@ res = t.Button(f,text='Reset',font=('arial 10 bold'),fg='red')
 res.place(x=210,y=430)
 
 f.mainloop()
-f1.mainloop()
