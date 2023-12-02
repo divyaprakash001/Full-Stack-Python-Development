@@ -5,10 +5,17 @@ f.title('Employee Details')
 f.geometry('400x500')
 f.resizable(width=0,height=0)
 
+v1 = t.StringVar(f,value=0)
+
+def getdata():
+    msg = ename.get()
+    print(msg)
+
 t.Label(f,text='Employee Details',bg='blue',fg='white',font=('verdana 14 bold')).place(x=90,y=10)
 t.Label(f,text='Employee Name',font=('arial 10 bold')).place(x=20,y=50)
 
-ename=t.Entry(f,width=30).place(x=180,y=50)
+ename=t.Entry(f,width=30)
+ename.place(x=180,y=50)
 
 t.Label(f,text='Post',font=('arial 10 bold')).place(x=20,y=90)
 c1=t.Checkbutton(f,text='Analyst')
@@ -20,11 +27,11 @@ c3.place(x=240,y=110)
 
 
 t.Label(f,text='Gender',font=('arial 10 bold')).place(x=20,y=150)
-r1 = t.Radiobutton(f,text='Male')
+r1 = t.Radiobutton(f,text='Male',variable=v1,value=0)
 r1.place(x=40,y=170)
-r2 = t.Radiobutton(f,text='Female')
+r2 = t.Radiobutton(f,text='Female',variable=v1,value=1)
 r2.place(x=140,y=170)
-r3 = t.Radiobutton(f,text='Other')
+r3 = t.Radiobutton(f,text='Others',variable=v1,value=2)
 r3.place(x=240,y=170)
 
 t.Label(f,text='State',font=('arial 10 bold')).place(x=20,y=210)
@@ -36,7 +43,7 @@ t.Label(f,text='Address',font=('arial 10 bold')).place(x=20,y=250)
 adr = t.Text(f,width=40,height=8)
 adr.place(x=40,y=280)
 
-sub = t.Button(f,text='Submit',font=('arial 10 bold'),fg='green')
+sub = t.Button(f,text='Submit',font=('arial 10 bold'),fg='green', command=getdata)
 sub.place(x=90,y=430)
 
 res = t.Button(f,text='Reset',font=('arial 10 bold'),fg='red')
