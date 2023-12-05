@@ -18,3 +18,33 @@ Gender :: Male
 State :: jharkhand
 Address :: anaith aa
 
+Employee name :: shalesh
+Designation :: Analyst
+Gender :: Male
+State :: Bihar
+Address :: naubhtpur
+
+Employee name :: dds
+Designation ::  Manager
+Gender :: Male
+State :: jharkhand
+Address :: sdsd
+
+Employee name :: anubhav jha
+Designation :: Analyst
+Gender :: Male
+State :: jharkhand
+Address :: parsa
+
+Employee name :: khhs
+Designation ::  Manager
+Gender :: Male
+State :: jharkhand
+Address :: sd
+
+Employee name :: dsd
+Designation :: Analyst
+Gender :: Male
+State :: jharkhand
+Address :: dsd
+
