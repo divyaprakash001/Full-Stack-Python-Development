@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    min-height: 75px;
+    background-color: antiquewhite;
+}
+nav{
+    background-color: brown;
+    border: 1px solid red;
+    display: flex;
+    align-content: space-around;
+}
+nav ul{
+    border: 1px solid royalblue;
+    display: flex;
+}

@@ -51,7 +51,7 @@ r3 = t.Radiobutton(f,text='Others',variable=v1,value='Others')
 r3.place(x=240,y=170)
 
 t.Label(f,text='State',font=('arial 10 bold')).place(x=20,y=210)
-st = ttk.Combobox(f,textvariable=cmb)
+st = ttk.Combobox(f,textvariable=cmb,state='readonly')
 st['values']=('Not selected','Bihar','Uttar Pradesh','Madhya Pradesh')
 st.place(x=130,y=210)
 

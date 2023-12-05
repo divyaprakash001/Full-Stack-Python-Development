@@ -12,3 +12,9 @@ Address :: Anaith Ara 802302
 anaith
 nawada
 
+Employee name :: divyaprakash
+Designation ::  Manager
+Gender :: Male
+State :: jharkhand
+Address :: anaith aa
+
