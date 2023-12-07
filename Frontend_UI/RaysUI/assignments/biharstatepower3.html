@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bihar State Power Generation Company Limited</title>
+    <style>
+        table,
+        td {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+
+        img {
+            width: 150px;
+            height: 100px;
+            margin-left: 90px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <!-- first row for heading -->
+        <tr>
+            <td><img src="logoBshpl.png" alt=""></td>
+            <td>
+                <h3>BIHAR STATE POWER GENERATION COMPANY LIMITED</h3>
+            </td>
+        </tr>
+
+        <!-- second row for consumer Details -->
+
+        <tr>
+            <td>
+                <h3>Consumer Details</h3><br>
+
+                <label for="bid">Bill Id</label><input type="text" id="bid"><br>
+                <label for="cid">Customer Id</label><input type="text" id="cid"><br>
+                <label for="cname">Customer Name</label><input type="text" id="cname"><br>
+                <label for="caddr">Customer Address</label><input type="text" id="caddr"><br>
+                <label for="artype">Area Type</label><input type="text" id="artype">
+                </ul>
+            </td>
+            <td>
+                <label for="mno">Meter Number</label><input type="text" id="mno"><br>
+                <label for="mono">Mobile Number</label><input type="text" id="mono"><br>
+                <label for="mono">Mobile Number</label><input type="text" id="mono"><br>
+                <label for="mono">Mobile Number</label><input type="text" id="mono"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="border: 2px solid red;">
+                <h3>Reading Details</h3>
+                <label for="pread">Previous Reading</label><input type="text" id="pread"><br>
+                <label for="cread">Current Reading</label><input type="text" id="cread"><br>
+                <label for="cons">Consumption</label><input type="text" id="cons"><br>
+            </td>
+            <td>
+                <h3>Arrear Details</h3>
+                <label for="poAmount">Payment On Amount</label><input type="text" id="poAmount"><br>
+                <label for="edue">Energy Dues</label><input type="text" id="edue"><br>
+                <label for="ardps">Arrears DPS</label><input type="text" id="ardps"><br>
+                <label for="sta">Sub Total (A)</label><input type="text" id="sta"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="border: 2px solid red;">
+                <h3>Details of Last Payment</h3>
+                <label for="lpa">Last Paid Amount</label><input type="text" id="lpa"><br>
+                <label for="lpdate">Last Paid Date</label><input type="text" id="lpdate"><br>
+                <label for="pyid">Payment Id</label><input type="text" id="pyid"><br>
+            </td>
+            <td rowspan="2">
+                <h3>Current Bill Details</h3>
+                <label for="echarge">Energy Charges</label><input type="text" id="echarge"><br>
+                <label for="fxcharge">Fixed Charge</label><input type="text" id="fxcharge"><br>
+                <label for="elduty">Electric Duty</label><input type="text" id="elduty"><br>
+                <label for="mtrent">Meter Rent</label><input type="text" id="mtrent"><br>
+                <label for="otcharge">Other Charges Type</label><input type="text" id="otcharge"><br>
+                <label for="gvtsub">Gov. Subsidy</label><input type="text" id="gvtsub"><br>
+                <label for="stb">Sub Total (B)</label><input type="text" id="stb"><br>
+                <label for="grsab">Gross Total (A+B)</label><input type="text" id="grsab"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="border: 2px solid red;">
+                <label for="bid">Payable Amount Upto</label><br>
+                <label for="bid">Payable Amount Upto</label><br>
+                <label for="bid">Paid After</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="Create Bill"></td>
+        </tr>
+
+    </table>
+
+
+
+</body>
+
+</html>

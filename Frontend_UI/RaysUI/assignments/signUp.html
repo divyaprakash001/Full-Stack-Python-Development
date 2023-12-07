@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        div {
+            border: 3px solid rgb(234, 234, 234);
+            margin: 40px auto;
+            width: 500px;
+            height: 500px;
+            background-color: #fff;
+            border-radius: 50px;
+            box-shadow: 2px 2px 2px 1px rgb(113, 103, 103);
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: -5px;
+        }
+
+        table,
+        tr,
+        td {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+
+        form {
+            /* border: 2px solid red; */
+            margin: 60px;
+        }
+
+        input[type='text'] {
+            width: 250px;
+            height: 20px;
+            padding: 10px;
+            border-radius: 30px;
+            margin-top: 30px;
+            margin-left: 20px;
+            box-shadow: 2px 2px 2px 1px rgb(113, 103, 103);
+            border: none;
+        }
+
+        input[type='checkbox'] {
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 50px;
+            font-size: 8px;
+            color: rebeccapurple;
+        }
+
+        input[type='button'] {
+            padding: 8px 30px;
+            border-radius: 30px;
+            margin: 20px 80px;
+            background: linear-gradient(90deg, rgb(187, 111, 226) 0%, rgb(81, 23, 241) 100%);
+            color: white;
+            border: none;
+        }
+
+        #lastlabel {
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 70px;
+            /* font-size: 8px; */
+            color: gray;
+        }
+
+        .tt {
+            margin-right: -20px;
+        }
+
+        i {
+            margin-left: 30px;
+            margin-right: 10px;
+            font-size: 22px;
+            color: blueviolet;
+        }
+
+        #check {
+            color: gray;
+        }
+
+        a {
+            text-decoration: none;
+            color: rebeccapurple;
+        }
+
+        a:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <form action="">
+            <h2>Sign Up</h2>
+            <label class="tt" for=""><i class="fa-solid fa-user"></i></label>
+            <input type="text" placeholder="Name"><br>
+            <label class="tt" for=""><i class="fa-solid fa-envelope-open"></i></label>
+            <input type="text" placeholder="E-mail"><br>
+            <label class="tt" for=""><i class="fa-solid fa-lock"></i></label>
+            <input type="text" placeholder="Password"><br>
+            <input type="checkbox" name="" id="agree">
+            <label id="check" for="agree">I read and agree to <a href="">Terms & Conditions</a></label><br>
+            <input type="button" value="CREATE ACCOUNT"><br>
+            <label id="lastlabel" for="already">Already have an account? <a href="#">Sign in</a></label>
+        </form>
+    </div>
+
+</body>
+
+</html>
