@@ -93,4 +93,4 @@ def locate_cards(cards,query):
     return -1
 
 
-print(locate_cards([8,8,8,6,6,6,6,6,6,6,6,6,5,5,5,2,2,2,1,1,1,],6))  #test cases failed here as we have to get the first occurence of the queries element
+print(locate_cards([8,8,8,6,6,6,6,6,6,6,6,6,5,5,5,2,2,2,1,1,1,],6))  
