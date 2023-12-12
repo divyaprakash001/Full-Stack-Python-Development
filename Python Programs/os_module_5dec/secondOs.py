@@ -35,3 +35,4 @@ if not os.path.exists('OsModuleExample'):
 # os.rename('old','new')
 # os.rename('OsModuleExample','oskaexamplehai')
 
+print(os.path.getsize('info.txt'))

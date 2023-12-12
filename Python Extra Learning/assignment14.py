@@ -16,7 +16,22 @@ def calculate_all_in_one(basic):
     gross = basic + da+hra+ta+cca
     return da,hra,ta,cca,gross
     
-basic
+basic = 0
+
+def printDetails():
+    print('SNO',sno)
+    print('CODE',code)
+    print('NAME',name)
+    print('CATEGORY',category)
+    print('BASIC',basic)
+    print('DA',data[0])
+    print('HRA',data[1])
+    print('TA',data[2])
+    print('CCA',data[3])
+    print('GROSS',data[4])
+
+    
+
 
 for i in range(2):
     sno = int(input('Enter sno :: '))
@@ -24,17 +39,7 @@ for i in range(2):
     name = input('Enter name of the employee :: ')
     category = input('Enter category of the employee:: ')
     basic = int(input('Enter basic salary of the employee :: '))
-    
-
-for i in range(2):
-    print('SNO',sno)
-    print('CODE',code)
-    print('NAME',name)
-    print('CATEGORY',category)
-    print('BASIC',basic)
     data = calculate_all_in_one(basic)
-    print('DA',data[0])
-    print('HRA',data[1])
-    print('TA',data[2])
-    print('CCA',data[3])
-    print('GROSS',data[4])
+    printDetails()
+    
+    
