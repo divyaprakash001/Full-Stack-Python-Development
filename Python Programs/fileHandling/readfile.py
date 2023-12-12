@@ -1,4 +1,5 @@
-f = open('E:\Python Full Stack Development\Python GUI\employeeDetails.txt','r')
+f = open('E:\\Python Full Stack Development\\Python GUI\\employeeDetails.txt','r')
+print(f.read())
 # print(f.read())
 # print(f.read(90))
 print(f.readlines())
