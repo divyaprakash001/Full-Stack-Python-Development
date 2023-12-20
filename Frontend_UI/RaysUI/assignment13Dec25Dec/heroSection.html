@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
         .main {
             display: flex;
             justify-content: cen;
@@ -31,16 +35,16 @@
         }
 
         .left h2 {
-            position: relative;
-            left: 30%;
-            top: 25%;
+            /* text-align: center; */
+            margin-top: 150px;
+            margin-left: 310px;
+            line-height: 1.4;
         }
 
-        .left .btn {
-            position: relative;
-            left: 30%;
-            top: 25%;
-
+        .left .btnUp {
+          margin-left: 310px;
+          padding: 8px 20px;
+            border-radius: 5px;
         }
 
         .right {
@@ -55,23 +59,54 @@
             left: 80px;
         }
 
-        .about{
+        .about {
             display: flex;
             justify-content: center;
             height: 40vh;
         }
 
-        #firstChild{
-            background-color: yellow;
+        #firstChild {
+            background-color: rgb(255, 225, 0);
         }
-        #secondChild{
-            background-color: rgb(67, 199, 126);
+
+        #firstChild p,
+        #firstChild h3,
+        #secondChild p,
+        #secondChild h3,
+        #thirdChild p,
+        #thirdChild h3{
+            margin-left: 75px;
+            width: 60%;
         }
-        #thirdChild{
+
+        .btn {
+            margin-left: 75px;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .ybtn{
+            background-color: rgb(255, 225, 0);
+            border: 2px solid rgb(255, 255, 0);
+            color: black;
+        }
+        
+        .ybtn:hover{
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(255, 225, 0);
+        }
+
+        #secondChild {
+            background-color: rgb(52, 179, 109);
+        }
+
+        #thirdChild {
             background-color: rgb(74, 157, 230);
         }
 
-
+        i{
+            size: 7;
+        }
     </style>
 </head>
 
@@ -79,8 +114,9 @@
 
     <div class="main">
         <div class="left">
-            <h2><span>Video software</span> for<br>the video-loving business</h2>
-            <input class="btn" type="button" value="Watch Video">
+            <h2><span>Video software</span> for <br>
+                      the video-loving business</h2>
+            <input class="btnUp" type="button" value="Watch Video">
         </div>
         <div class="right">
             <img src="cameralady.png" alt="heroImage">
@@ -89,28 +125,28 @@
 
     <div class="about">
         <div id="firstChild">
-            icon
+            <p><i class="fa-solid fa-chart-simple" style="color: #17a2e8;"></i></p>
             <h3>Wishtle Hosting Market your <br>videos</h3>
             <p>Try our stock, customize player,
                 advance tools for marketers and detailed analytics, Learn More
             </p>
-            <input type="button" value="Start for free">
+            <input class="btn ybtn" type="button" value="Start for free">
         </div>
         <div id="secondChild">
-            icon
+            <p><i class="fa-solid fa-tv" style="color: #b38989;"></i></p>
             <h3>Wishtle Hosting Market your <br>videos</h3>
             <p>Try our stock, customize player,
                 advance tools for marketers and detailed analytics, Learn More
             </p>
-            <input type="button" value="Start for free">
+            <input class="btn" type="button" value="Download Scopebox">
         </div>
         <div id="thirdChild">
-            icon
+            <p><i class="fa-light fa-book-bookmark" style="color: #d7b742;"></i></p>
             <h3>Wishtle Hosting Market your <br>videos</h3>
             <p>Try our stock, customize player,
                 advance tools for marketers and detailed analytics, Learn More
             </p>
-            <input type="button" value="Start for free">
+            <input class="btn" type="button" value="Explore and learn">
         </div>
     </div>
 
