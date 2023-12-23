@@ -6,21 +6,310 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        .header{
+            border: none;
+            display: flex;
+            position: fixed;
+        }
+        .header nav{
+            background-color: #000;
+            border: none;
+        }
+        .header nav ul li{
+            border: none;
+            background-color: #000;
+            width: 100%;
+            margin-right: 20px;
+            list-style: none;
+        }
+
+        .header nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .hero {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lpic {
+            width: 150px;
+            margin: 100px auto 20px auto;
+        }
+
+        .txt {
+            margin: 0px auto;
+        }
+
+        .txt h1 {
+            font-size: 72px;
+            text-align: center;
+        }
+
+        .txt h3 {
+            text-align: center;
+            line-height: 2.5;
+            font-size: 30px;
+        }
+
+        .nme {
+            color: red;
+        }
+
+        .ttl{
+            color: rgb(255, 136, 0);
+            text-decoration: wavy underline;
+            text-decoration-color: white;
+        }
+
+        .desc {
+            margin: 0px auto 80px auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        .ptitle {
+            width: 40%;
+            height: 50px;
+            background-color: red;
+            border-radius: 0px 30px 30px 0px;
+            padding: 3px 0px 3px 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .ptitle p {
+            font-size: 30px;
+            margin: 5px auto;
+        }
+
+        /* .skills{
+
+        } */
+
+        .skills span{
+            margin-left: 200px;
+        }
+
+        .progbar{
+            width: 100%;
+            background-color:rgb(255, 136, 0);
+            margin-top: 10px;
+            margin-left: 20px;
+            border-radius: 0px 10px 10px 0px;
+            display: inline-block;
+        }
+
+        .portfolio {
+            width: 100%;
+            margin-top: 40px;
+            /* border: 1px solid red; */
+            height: auto;
+            padding: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: 1px solid white;
+            width: 282px;
+            border-radius: 10px 10px;
+            overflow: hidden;
+            background-color: white;
+            margin-top: 20px;
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        .card:hover{
+            box-shadow: 5px 5px 12px rgb(232, 229, 229);
+
+        }
+
+        .card h2{
+            margin: 10px 0px 10px 8px;
+            color: red;
+        }
+        
+        .cimg {
+            width: 280px;
+        }
+        
+        .dessc {
+            /* width: 14%; */
+            margin: 10px 0px 10px 8px;
+            color: black;
+            
+        }
+        
+        .btn{
+            margin: 10px 0px 10px 8px;
+            padding: 5px 30px;
+            border-radius: 20px 40px 20px 40px;
+            border: 1px solid red;
+            background-color: white;
+        }
+        
+        .btn:hover{
+            border: 1px solid white;
+            background-color: red;
+            transform: scale(1.1);
+        }
+
+        /* table{
+            width: 500px;
+        } */
+        td:nth-child(2){
+            width: 900px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div id="header">
+    <div class="header">
         <nav>
-            <img src="" alt="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
+
+    <div id="home" class="hero">
+        <img class='lpic' src="lady pic.png" alt="image">
+        <div class="txt">
+            <h1>I am <span class="nme">Divya Prakash</span></h1>
+            <h3>A Professional <span class="ttl">Web Developer</span></h3>
+            <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum blanditiis odit laudantium
+                temporibus eligendi magnam nisi. Perspiciatis, delectus ipsam quo sequi vitae doloribus atque nulla
+                temporibus dolore voluptas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, ea!
+                Lorem ipsum dolor sit amet. officiis aperiam.</p>
+        </div>
+    </div>
+
+    <!-- <hr> -->
+
+    <div class="ptitle">
+        <p>Skills</p>
+    </div>
+
+    <div class="skills">
+        <table>
+            <tr>
+                <td>Html</td>
+                <td colspan="54"><div class="progbar">99% </div></td>
+            </tr>
+            <tr>
+                <td>Html</td>
+                <td colspan="54"><div class="progbar">99% </div></td>
+            </tr>
+            <tr>
+                <td>Html</td>
+                <td colspan="54"><div class="progbar">99% </div></td>
+                
+            </tr>
+            <tr>
+                <td>Html</td>
+                <td colspan="54"><div class="progbar">99% </div></td>
+            </tr>
+        </table>
+        
+       
+    </div>
+
+    <div class="ptitle">
+        <p>Portfolio</p>
+    </div>
+
+    <div id="portfolio" class="portfolio">
+        <div class="card">
+            <img class="cimg"
+                src="https://wonderfulengineering.com/wp-content/uploads/2014/10/image-wallpaper-15-1024x768.jpg"
+                alt="img">
+
+            <h2>title here</h2>
+            <p class="dessc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint consequuntur,
+            </p>
+            <input class="btn" type="button" value="View">
+        </div>
+        <div class="card">
+            <img class="cimg"
+                src="https://wonderfulengineering.com/wp-content/uploads/2014/10/image-wallpaper-15-1024x768.jpg"
+                alt="img">
+
+            <h2>title here</h2>
+            <p class="dessc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint consequuntur,
+            </p>
+            <input class="btn" type="button" value="View">
+        </div>
+        <div class="card">
+            <img class="cimg"
+                src="https://wonderfulengineering.com/wp-content/uploads/2014/10/image-wallpaper-15-1024x768.jpg"
+                alt="img">
+
+            <h2>title here</h2>
+            <p class="dessc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint consequuntur,
+            </p>
+            <input class="btn" type="button" value="View">
+        </div>
+
+    </div>
+    <div class="portfolio">
+        <div class="card">
+            <img class="cimg"
+                src="https://wonderfulengineering.com/wp-content/uploads/2014/10/image-wallpaper-15-1024x768.jpg"
+                alt="img">
+
+            <h2>title here</h2>
+            <p class="dessc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint consequuntur,
+            </p>
+            <input class="btn" type="button" value="View">
+        </div>
+        <div class="card">
+            <img class="cimg"
+                src="https://wonderfulengineering.com/wp-content/uploads/2014/10/image-wallpaper-15-1024x768.jpg"
+                alt="img">
+
+            <h2>title here</h2>
+            <p class="dessc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint consequuntur,
+            </p>
+            <input class="btn" type="button" value="View">
+        </div>
+        <div class="card">
+            <img class="cimg"
+                src="https://wonderfulengineering.com/wp-content/uploads/2014/10/image-wallpaper-15-1024x768.jpg"
+                alt="img">
+
+            <h2>title here</h2>
+            <p class="dessc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint consequuntur,
+            </p>
+            <input class="btn" type="button" value="View">
+        </div>
+
+    </div>
+
+    <div id="contact" class="ptitle">
+        <p> Contact</p>
+    </div>
+
+
 
 </body>
 
