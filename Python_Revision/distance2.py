@@ -1,3 +1,4 @@
+# import check2 as dd
 class Distance:
     feet=inch=0
     
@@ -13,7 +14,12 @@ class Distance:
             self.inch = self.inch % 12
         print(f'Feet :: {Distance.feet} \nInch :: {Distance.inch}')
         print(f'Feet :: {self.feet} \nInch :: {self.inch}')
-    
+        print("----------------------------------------------------")
+        # p  = dd.checker()
+        # p.disp()
+        # p.check(12,3)
 d = Distance()
 d.input(10,27)
+d.disp()
+d.input(8,5)
 d.disp()

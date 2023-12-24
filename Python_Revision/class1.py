@@ -17,7 +17,7 @@ class Person:
     
     @staticmethod
     def smethod(self):
-        print('static method loaded first before constructor',Person.loaded)
+        print('static method loaded',Person.loaded)
     
 p = Person('Divya loaded','Prakahs',24,'India')
 Person.smethod(p)
