@@ -36,6 +36,7 @@ print(locate_cards([8,7,4,3,2,1],-2))
 print(locate_cards([],-2))  
 '''
 '''
+
 # applying bineary search algorithm for efficiency
 
 def locate_cards(cards,query):
