@@ -23,5 +23,5 @@ class child(Inheri2,Inheri1):
     #     print("this is the second method of the child class")
 
 x = child()
-x.firstmethod()
+x.firstmethod() #execute first inheri parent method if both have same method
 x.secondmethod()
