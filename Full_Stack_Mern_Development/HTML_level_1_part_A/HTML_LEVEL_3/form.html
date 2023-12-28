@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+
+    <form action="/action">
+        <label>
+            Username
+            <input type="text" placeholder="username here">
+        </label><br>
+        <!-- classical approach -->
+        <label for="pass">Password</label>
+        <input type="password" name="" id="pass" placeholder="password here">
+    </form>
+
+    <br><br>
+
+    <form action="/action">
+        <!-- classical approach -->
+        <div>
+            <label for="user">Username</label>
+            <input type="text" name="" id="user" placeholder="username here">
+        </div>
+<!-- donot user br tag here. use div or css display:block -->
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" name="" id="pass" placeholder="password here">
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button">button</button>
+        <button type="reset">Reset</button>
+        <input type="submit" value="Click me">
+        <input type="reset" value="reset me">
+        <input type="button" value="button me">
+    </form>
+
+    <br><br>
+
+    <form action="/action">
+        <div>
+            <label for="user">Username</label>
+            <input type="text" name="user" id="user" placeholder="username here">
+        </div>
+<!-- donot user br tag here. use div or css display:block -->
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" placeholder="password here">
+        </div>
+        <div>
+            <input type="checkbox" name="age" id="age" value="18+" checked>
+            <label for="age">I am 18+</label>
+        </div>
+        <div>
+            <input type="radio" name="fruit" id="apple" value="apple">
+            <label for="apple">Apple</label>
+            <input type="radio" name="fruit" id="mango" value="mango">
+            <label for="mango">Mango</label>
+            <input type="radio" name="fruit" id="orange">
+            <label for="orange">Orange</label>
+        </div>
+        <div>
+            Choose your subjects :
+            <input type="checkbox" name="subjects" id="math" value="math">
+            <label for="math">Math</label>
+            <input type="checkbox" name="subjects" id="science" value="sci">
+            <label for="science">Science</label>
+            <input type="checkbox" name="subjects" id="sst" value="sst">
+            <label for="sst">SST</label>
+        </div>
+        <div>
+            <label for="Profession">Profession</label>
+            <select name="Profession" id="Profession">
+                <option>select your option</option>
+                <option value="stu" selected>student</option>
+                <option value="dev">developer</option>
+            </select>
+        </div>
+        <div>
+            <label for="vol"></label>
+            <input type="range" name="vol" id="vol" min="0" max="100">
+            <p><label for="message">Message :</label>
+            <textarea name="message" id="message" cols="30" rows="3"></textarea></p>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
