@@ -1,4 +1,6 @@
-import matplotlib.pyplot as t
+# line 2 and 3 are same as working
+# import matplotlib.pyplot as t  
+from matplotlib import pyplot as t
 import numpy as p
 
 # x = p.array([0,2,4,7,9,10,11,12,15])
