@@ -14,6 +14,7 @@
             margin: 0;
             /* padding: 0;
             box-sizing: border-box; */
+            scroll-behavior: smooth;
         }
 
 
@@ -99,6 +100,7 @@
             padding: 90px 0px;
             /* margin-left: 140px; */
             margin-right: -500px;
+            z-index: 1;
         }
 
         .upper {
@@ -126,14 +128,26 @@
             color: white;
             padding: 8px 18px;
             margin-right: 10px;
+            border: 1px solid #2631b0;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: #2631b0;
+            border: 1px solid #2631b0;
+            background-color: transparent;
         }
 
         .btn+a {
             color: #0b1688;
             text-decoration: none;
             font-size: 15px;
+            cursor: pointer;
             margin-bottom: 70px;
+            cursor: pointer;
         }
+
+
 
         .fa-forward {
             vertical-align: middle;
@@ -151,10 +165,14 @@
             margin-right: 30px;
             padding: 15px 22px;
             border-radius: 8px;
+            text-align: center;
         }
 
-        img {
+        .right .rimg {
             height: 450px;
+            position: relative;
+            bottom: -19px;
+            right: -100px;
         }
 
         /* service section */
@@ -280,7 +298,10 @@
 
         /* category_section */
 
-        
+        .cat_section {
+            padding: 30px;
+        }
+
         .cat_section h2 {
             margin-top: 50px;
             text-align: center;
@@ -296,14 +317,112 @@
             width: 31%;
         }
 
+        .crd_grp {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
 
+        .crd {
+            width: 150px;
+            height: 130px;
+            /* border: 1px solid red; */
+            background-color: white;
+            box-shadow: 1px 1px 1px 1px rgb(188, 185, 185);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px 15px;
+            align-items: center;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
 
+        .crd p {
+            color: gray;
+            font-size: 15px;
+        }
+
+        .crd a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        .crd .fa-cart-shopping {
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .crd:hover {
+            cursor: pointer;
+            box-shadow: 1px 2px 1px 1px gray;
+        }
+
+        .full {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full img {
+            width: 800px;
+            height: 280px;
+            margin: 0px auto;
+            margin-bottom: 50px;
+        }
+
+        /* footer styling */
+
+        footer {
+            width: 100%;
+            height: 40vh;
+            background-color: #01182e;
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+
+        }
+
+        .foot-item {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        .foot-item h3 {
+            margin-bottom: 20px;
+        }
+
+        footer .foot-item img {
+            height: 15px;
+        }
+
+        .foot-item a {
+            color: rgb(202, 202, 202);
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .foot-item a:hover {
+            color: white;
+        }
+
+        .foot-item p {
+            width: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        
     </style>
 </head>
 
 <body>
 
-    <header>
+    <header id="header">
         <div class="logo_srch">
             <a href="#"><img src="kamal husen logo.png" alt="logo_here"></a>
             <p><i class="fa-solid fa-magnifying-glass" style="color: #86b2fd;"></i>
@@ -313,8 +432,8 @@
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="#">Marketplace</a></li>
-                    <li><a href="#">Course List</a></li>
+                    <li><a href="#cat">Marketplace</a></li>
+                    <li><a href="#courselist">Course List</a></li>
                     <li><a href="#">Pages <i class="fa-solid fa-caret-down fa-2xs" style="color: #83a2d8;"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #5179bd;"></i>(1)</a></li>
                     <li><a href="#"><i class="fa-solid fa-circle" style="color: #416fbe;"></i></a>Hello</li>
@@ -324,7 +443,7 @@
     </header>
 
 
-    <section class="hero_section">
+    <section class="hero_section" id="hero">
         <div class="left">
             <div class="upper">
                 <h1>You will get popular
@@ -341,7 +460,7 @@
                     <h2>940+</h2>
                     <p>Courses</p>
                 </div>
-                <div class="lcard rc">
+                <div class="lcard">
                     <h2>5K+</h2>
                     <p>Active Students</p>
                 </div>
@@ -354,7 +473,7 @@
 
     <!-- service section -->
 
-    <section class="service">
+    <section class="service" id="courselist">
         <h2>The Best online courses get here</h2>
         <p>Develop your new skill in 2024 with an ultimate to our 900+ courses.<span> Make sure your new career</span>
         </p>
@@ -375,7 +494,8 @@
                 <hr>
                 <div class="card_bottom">
                     <span>4000 $</span>
-                    <button class="btn btn-bot" type="button"><i>i</i> view cart</button>
+                    <button class="btn btn-bot" type="button"><i class="fa-solid fa-cart-shopping"
+                            style="color: #5179bd;"></i> view cart</button>
                 </div>
             </div>
 
@@ -394,7 +514,8 @@
                 <hr>
                 <div class="card_bottom">
                     <span>4000 $</span>
-                    <button class="btn btn-bot" type="button"><i>i</i> view cart</button>
+                    <button class="btn btn-bot" type="button"><i class="fa-solid fa-cart-shopping"
+                            style="color: #5179bd;"></i> view cart</button>
                 </div>
             </div>
 
@@ -414,7 +535,8 @@
                 <hr>
                 <div class="card_bottom">
                     <span>4000 $</span>
-                    <button class="btn btn-bot" type="button"><i>i</i> view cart</button>
+                    <button class="btn btn-bot" type="button"><i class="fa-solid fa-cart-shopping"
+                            style="color: #5179bd;"></i> view cart</button>
                 </div>
             </div>
 
@@ -450,20 +572,75 @@
     </section>
 
 
-    <section class="cat_section">
+    <!-- category section -->
+
+    <section class="cat_section" id="cat">
         <h2>Browse by category</h2>
         <p>Develop your new skill in 2024 with an ultimate to our 900+ courses.<span> Make sure your new career</span>
         </p>
+        <div class="full">
+            <span class="crd_grp">
+                <div class="crd">
+                    <i class="fa-solid fa-cart-shopping" style="color: #5179bd;"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>20&nbsp;courses</p>
+                    <a href="#">Browse All Courses</a>
+                </div>
+                <div class="crd">
+                    <i class="fa-solid fa-cart-shopping" style="color: #5179bd;"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>20&nbsp;courses</p>
+                    <a href="#">Browse All Courses</a>
+                </div>
+                <div class="crd">
+                    <i class="fa-solid fa-cart-shopping" style="color: #5179bd;"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>20&nbsp;courses</p>
+                    <a href="#">Browse All Courses</a>
+                </div>
+                <div class="crd">
+                    <i class="fa-solid fa-cart-shopping" style="color: #5179bd;"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>20&nbsp;courses</p>
+                    <a href="#">Browse All Courses</a>
+                </div>
+            </span>
+            <img src="coding1.png" alt="banner">
+        </div>
 
     </section>
 
 
     <footer>
-        <div class="foot-item"></div>
-        <div class="foot-item"></div>
-        <div class="foot-item"></div>
-        <div class="foot-item"></div>
+        <div class="foot-item">
+            <img src="kamal husen logo.png" alt="">
+            <p>Choose online video courses with new additons published every month</p>
+            <a href="mailto:divyaprakashara09@gmail.com">divyaprakashara09@gmail.com</a>
+            <span>+91 7461918110</span>
+        </div>
+        <div class="foot-item">
+            <h3>Quick Links</h3>
+            <a href="#">About</a>
+            <a href="#">Blogs</a>
+            <a href="#">Courses</a>
+            <a href="#">Pricing</a>
+        </div>
+        <div class="foot-item">
+            <h3>Resources</h3>
+            <a href="#">Course List</a>
+            <a href="#">Instructor</a>
+            <a href="#">Membership</a>
+            <a href="#">FAQS</a>
+        </div>
+        <div class="foot-item">
+            <h3>Support</h3>
+            <a href="#">Forums</a>
+            <a href="#">Documentation</a>
+            <a href="#">Community</a>
+            <a href="#">Policy</a>
+        </div>
     </footer>
+
 
 
 
