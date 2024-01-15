@@ -12,143 +12,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-
         body{
-            font-family: 'Open Sans', sans-serif;
-        }
-        .main {
-            display: flex;
-            justify-content: cen;
-            background-color: rgb(190, 136, 155);
-            height: 60vh;
-            position: relative;
-        }
-
-        .left {
-            width: 50%;
-            /* border: 1px solid red; */
-        }
-
-
-        span {
-            color: white;
-        }
-
-        .left h2 {
-            /* text-align: center; */
-            margin-top: 150px;
-            margin-left: 310px;
-            line-height: 1.4;
-        }
-
-        .left .btnUp {
-          margin-left: 310px;
-          padding: 8px 20px;
-            border-radius: 5px;
-        }
-
-        .right {
-            width: 50%;
-            /* border: 1px solid red; */
-        }
-
-        .right img {
-            height: 95%;
-            position: relative;
-            bottom: -22px;
-            left: 80px;
-        }
-
-        .about {
-            display: flex;
-            justify-content: center;
-            height: 40vh;
-        }
-
-        #firstChild {
-            background-color: rgb(255, 225, 0);
-        }
-
-        #firstChild p,
-        #firstChild h3,
-        #secondChild p,
-        #secondChild h3,
-        #thirdChild p,
-        #thirdChild h3{
-            margin-left: 75px;
-            width: 60%;
-        }
-
-        .btn {
-            margin-left: 75px;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        .ybtn{
-            background-color: rgb(255, 225, 0);
-            border: 2px solid rgb(255, 255, 0);
-            color: black;
-        }
-        
-        .ybtn:hover{
-            background-color: rgb(255, 255, 255);
-            border: 2px solid rgb(255, 225, 0);
-        }
-
-        #secondChild {
-            background-color: rgb(52, 179, 109);
-        }
-
-        #thirdChild {
-            background-color: rgb(74, 157, 230);
-        }
-
-        i{
-            size: 7;
+            text-align: center ;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="main">
-        <div class="left">
-            <h2><span>Video software</span> for <br>
-                      the video-loving business</h2>
-            <input class="btnUp" type="button" value="Watch Video">
-        </div>
-        <div class="right">
-            <img src="cameralady.png" alt="heroImage">
-        </div>
+    {% include 'navbar.html' %}
+
+    <form action="/index/" method="post">
+        {% csrf_token %}
+        <input type="text" name="client" id=""><br>
+        <input type="checkbox" name="check" id=""> I want data <br>
+        <button type="submit">Send</button>
+    </form>
+    
+    <div>
+        <h1>Welcome to django project</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, similique libero odio ut ex ad rerum provident possimus deleniti officia harum earum rem alias aspernatur, illo ducimus quisquam sed nihil repellendus placeat sequi ipsam! Voluptates iusto sapiente quos iure quo.</p>
+        <button type="button">Contact Us</button>
     </div>
 
-    <div class="about">
-        <div id="firstChild">
-            <p><i class="fa-solid fa-chart-simple" style="color: #17a2e8;"></i></p>
-            <h3>Wishtle Hosting Market your <br>videos</h3>
-            <p>Try our stock, customize player,
-                advance tools for marketers and detailed analytics, Learn More
-            </p>
-            <input class="btn ybtn" type="button" value="Start for free">
-        </div>
-        <div id="secondChild">
-            <p><i class="fa-solid fa-tv" style="color: #b38989;"></i></p>
-            <h3>Wishtle Hosting Market your <br>videos</h3>
-            <p>Try our stock, customize player,
-                advance tools for marketers and detailed analytics, Learn More
-            </p>
-            <input class="btn" type="button" value="Download Scopebox">
-        </div>
-        <div id="thirdChild">
-            <p><i class="fa-light fa-book-bookmark" style="color: #d7b742;"></i></p>
-            <h3>Wishtle Hosting Market your <br>videos</h3>
-            <p>Try our stock, customize player,
-                advance tools for marketers and detailed analytics, Learn More
-            </p>
-            <input class="btn" type="button" value="Explore and learn">
-        </div>
+    
+
+    <!-- accessing dynamic data value -->
+    {% if isActive %}
+    <div>
+        <h1>Current data is {{date}}</h1>
+        <h1>Requester is {{name}}</h1>
+        <h2>isactive is :: {{isActive}}</h2>
+        <hr>
+        <h1>Student data</h1>
+        <h2>student name  :: {{student_data.studentName}}</h2>
+        <h2>student college  :: {{student_data.studentCollege}}</h2>
+        <h2>student name  :: {{student_data.studentCity}}</h2>
+        <hr>
+        <h1>Favourites programs</h1>
+        {% for p in list_of_programs %}
+        <table  style="border-collapse: collapse; border: 1px solid red;">
+            <tr>
+                <td>{{p}}</td>
+            </tr>
+        </table>
+
+        {% endfor%}
     </div>
+
+    {% endif %}
 
 
 

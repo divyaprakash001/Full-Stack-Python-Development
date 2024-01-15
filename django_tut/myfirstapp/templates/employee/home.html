@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Home</title>
+    <style>
+        table,tr,td,thead{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'employee/navbar.html' %}
+    <h1>This is employee home page using html file </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#SN0.</th>
+                <th>NAME</th>
+                <th>EMP ID</th>
+                <th>PHONE</th>
+                <th>WORKING</th>
+                <th>DEPARTMENT</th>
+                <th>ADDRESS</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in emps %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{e.name}}</td>
+                    <td>{{e.emp_id}}</td>
+                    <td>{{e.phone}}</td>
+                    <td>{{e.working}}</td>
+                    <td>{{e.department}}</td>
+                    <td>{{e.address}}</td>
+                    <td>
+                        <a href="/employee/delete-emp/{{e.id}}">Delete</a>
+                        <a href="/employee/update-emp/{{e.id}}">Update</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
