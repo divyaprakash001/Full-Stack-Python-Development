@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testimonials page</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table,
+        tr,
+        td,
+        thead {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'employee/navbar.html' %}
+    <h1>This is employee home page using html file </h1>
+    <table>
+        <caption>testimonials page</caption>
+        <thead>
+            <tr>
+                <th>#SN0.</th>
+                <th>NAME</th>
+                <th>Testimonials</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in testi %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td><img src="/testimonial/{{t.picture}}" alt="" width="70" height="70"></td>
+                <td>{{t.name}}</td>
+                <td>{{t.testimonial}}</td>
+                <td>{{t.rating}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
