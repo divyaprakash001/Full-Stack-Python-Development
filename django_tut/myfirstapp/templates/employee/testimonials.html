@@ -29,6 +29,7 @@
         <thead>
             <tr>
                 <th>#SN0.</th>
+                <th>Client Pic.</th>
                 <th>NAME</th>
                 <th>Testimonials</th>
                 <th>Rating</th>
@@ -38,7 +39,7 @@
             {% for t in testi %}
             <tr>
                 <td>{{forloop.counter}}</td>
-                <td><img src="/testimonial/{{t.picture}}" alt="" width="70" height="70"></td>
+                <td><img src="/media/{{t.picture}}" alt="client_pic"></td>
                 <td>{{t.name}}</td>
                 <td>{{t.testimonial}}</td>
                 <td>{{t.rating}}</td>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Feedback</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table,
+        tr,
+        td,
+        thead {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    {% include 'employee/navbar.html' %}
+    <h1>This is employee feedback page using html file </h1>
+
+
+    <form action="/employee/feedback/" method="post">
+        {% csrf_token %}
+        <div>
+            {{form.as_p}}
+        </div>
+
+        <!-- {{form.as_table}} -->
+        <!-- {{form.as_div}} -->
+        <!-- {{form.as_ul}} -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+
+</html>
