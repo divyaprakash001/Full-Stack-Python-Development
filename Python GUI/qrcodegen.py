@@ -21,7 +21,7 @@ def qr():
         )
         qr.add_data(s)
         qr.make(fit = True)
-        img = qr.make_image(fill_color='white',back_color='black')
+        img = qr.make_image(fill_color='hotpink')
         img.save('myqr.png')
         img.show()
 
