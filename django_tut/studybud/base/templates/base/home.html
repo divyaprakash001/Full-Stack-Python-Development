@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
 </head>
 <body>
+
     {% extends 'main.html' %}
 
     {% block content %}
-    <h1>Home page</h1>
-    <h2>Syllabus
-        {% for room in rooms %}
-            <h3>{{room.id}} ==> {{room.name}}</h3>
-        {% endfor %}
-    </h2>
+
+    <h1>hello</h1>
+    {% for room in rooms %}
+
+        <!-- <h2>{{room.id}} ==> <a href="/room/{{room.id}}" target="_blank">{{room.name}}</a></h2> -->
+        <h2>{{room.id}} ==> <a href="{% url 'room' room.id %}" >{{room.name}}</a></h2>
+
+    {% endfor %}
+
 
 
     {% endblock content %}
+    
 </body>
 </html>
