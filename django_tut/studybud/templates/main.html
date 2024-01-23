@@ -8,7 +8,9 @@
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
   </head>
   <body>
-    {% include 'navbar.html' %} {% if messages %}
+    {% include 'navbar.html' %}
+    
+    {% if messages %}
     <ul class="messages">
       {% for message in messages %}
       <li style="color:tomato;">{{ message }}</li>
