@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+   
     <style>
         * {
             margin: 0;
@@ -422,11 +422,12 @@
 
 <body>
 
-    {% include 'navbar.html' %}
+    <!-- {% include 'navbar.html' %} -->
+    {% load static %}
 
     <header id="header">
         <div class="logo_srch">
-            <a href="#"><img src="kamal husen logo.png" alt="logo_here"></a>
+            <a href="#"><img src="{% static 'images/kamalhusenlogo.png' %}" alt="logo_here"></a>
             <p><i class="fa-solid fa-magnifying-glass" style="color: #86b2fd;"></i>
                 <input type="search" name="search" id="srch" placeholder="Search">
             </p>
